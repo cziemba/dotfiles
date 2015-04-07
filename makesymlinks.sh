@@ -30,7 +30,8 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-git submodule update --recursive
+# initialize submodules
+git submodule update --init --recursive
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
