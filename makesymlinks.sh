@@ -56,3 +56,6 @@ fi
 }
 
 install_zsh
+
+# zsh-syntax-highlighting plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting $dir/zsh/custom/plugins/zsh-syntax-highlighting
