@@ -1,1 +1,6 @@
-git clone https://github.com/cziemba/dotfiles ~/.dotfiles && ~/.dotfiles/makesymlinks.sh
+Install
+-------
+
+`cd ~`
+
+`git clone https://github.com/cziemba/dotfiles ~/.dotfiles && ~/.dotfiles/makesymlinks.sh`
