@@ -77,17 +77,6 @@ filetype indent on
 set mouse=a
 set ttymouse=xterm2
 
-"colors
-hi User1 guifg=#ffdad8 ctermfg=224 guibg=#880c0e ctermbg=88  
-hi User2 guifg=#000000 ctermfg=16  guibg=#F4905C ctermbg=209 
-hi User3 guifg=#292b00 ctermfg=234 guibg=#f4f597 ctermbg=228 
-hi User4 guifg=#112605 ctermfg=233 guibg=#aefe7B ctermbg=156 
-hi User5 guifg=#051d00 ctermfg=232 guibg=#7dcc7d ctermbg=114 
-hi User7 guifg=#ffffff ctermfg=231 guibg=#880c0e ctermbg=88  gui=bold cterm=bold
-hi User8 guifg=#ffffff ctermfg=231 guibg=#5b7fbb ctermbg=67  
-hi User9 guifg=#ffffff ctermfg=231 guibg=#810085 ctermbg=90  
-hi User0 guifg=#ffffff ctermfg=231 guibg=#094afe ctermbg=27  
-
 "statusline
 set statusline=
 set statusline+=%7*\[%n]                                  "buffernr
@@ -151,3 +140,15 @@ if has("gui_running")
     :set guioptions-=r  "remove right-hand scroll bar
     :set guioptions-=L  "remove left-hand scroll bar
 endif
+
+"colors
+hi User1 ctermfg=224 ctermbg=88  guifg=#ffdad8 guibg=#880c0e 
+hi User2 ctermfg=16  ctermbg=209 guifg=#000000 guibg=#F4905C 
+hi User3 ctermfg=234 ctermbg=228 guifg=#292b00 guibg=#f4f597 
+hi User4 ctermfg=233 ctermbg=156 guifg=#112605 guibg=#aefe7B 
+hi User5 ctermfg=232 ctermbg=114 guifg=#051d00 guibg=#7dcc7d 
+hi User7 ctermfg=231 ctermbg=88  guifg=#ffffff guibg=#880c0e gui=bold cterm=bold
+hi User8 ctermfg=231 ctermbg=67  guifg=#ffffff guibg=#5b7fbb 
+hi User9 ctermfg=231 ctermbg=90  guifg=#ffffff guibg=#810085 
+hi User0 ctermfg=231 ctermbg=27  guifg=#ffffff guibg=#094afe 
+
