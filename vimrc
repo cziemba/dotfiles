@@ -39,6 +39,7 @@ set showmode    "show current mode down the bottom
 set number      "show line numbers
 
 "display tabs and trailing spaces
+set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 
 set incsearch   "find the next match as we type the search
