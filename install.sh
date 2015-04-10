@@ -60,5 +60,10 @@ fi
 
 install_zsh
 
-# zsh-syntax-highlighting plugin
-git clone https://github.com/zsh-users/zsh-syntax-highlighting $dir/zsh/custom/plugins/zsh-syntax-highlighting
+# zsh-syntax-highlighting plugin TODO Make custom plugin array to update/clone all
+zsh_syntax_highlighting_dir=$dir/zsh/custom/plugins/zsh-syntax-highlighting
+if [[ "$(ls -A $zsh_syntax_highlighting_dir)" ]]; then
+    git -C $zsh_syntax_highlighting_dir pull
+else
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting $zsh_syntax_highlighting_dir
+fi
