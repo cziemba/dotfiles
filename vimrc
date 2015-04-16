@@ -25,8 +25,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/NerdTree'
 " Neaten code
 Plugin 'godlygeek/tabular'
-" Helps with colors
-Plugin 'megaannum/colorschemer'
 " Makes python editing in vim nicer
 Plugin 'klen/python-mode'
 " Display number of search results
@@ -37,46 +35,6 @@ if !has("win32")
 endif
 
 call vundle#end()
-
-" ============================================================================
-" Status line settings
-
-" Colors
-hi User1 ctermfg=224 ctermbg=88  guifg=#ffdad8 guibg=#880c0e
-hi User2 ctermfg=16  ctermbg=209 guifg=#000000 guibg=#F4905C
-hi User3 ctermfg=234 ctermbg=228 guifg=#292b00 guibg=#f4f597
-hi User4 ctermfg=233 ctermbg=156 guifg=#112605 guibg=#aefe7B
-hi User5 ctermfg=232 ctermbg=114 guifg=#051d00 guibg=#7dcc7d
-hi User7 ctermfg=231 ctermbg=88  guifg=#ffffff guibg=#880c0e gui=bold cterm=bold
-hi User8 ctermfg=231 ctermbg=67  guifg=#ffffff guibg=#5b7fbb
-hi User9 ctermfg=231 ctermbg=90  guifg=#ffffff guibg=#810085
-hi User0 ctermfg=231 ctermbg=27  guifg=#ffffff guibg=#094afe
-
-" Status line
-set statusline=                                           " Clear
-set statusline+=%7*\[%n]                                  " buffernr
-set statusline+=%1*\ %<%F\                                " File+path
-set statusline+=%2*\ %y\                                  " FileType
-set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      " Encoding
-set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            " Encoding2
-set statusline+=%4*\ %{&ff}\                              " FileFormat (dos/unix..)
-set statusline+=%5*\ %{&spelllang}\%{HighlightSearch()}\  " Spellanguage & Highlight on?
-set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             " Rownumber/total (%)
-set statusline+=%9*\ col:%03c\                            " Colnr
-set statusline+=%0*\ \ %m%r%w\ %P\ \                      " Modified? Readonly? Top/bot.
-set laststatus=2
-
-" Is highlight search enabled
-function! HighlightSearch()
-  if &hls
-    return '  H'
-  else
-    return ''
-  endif
-endfunction
-
-" Highlight search result toggle
-:noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " ============================================================================
 " GUI specific Vim settings
@@ -176,6 +134,47 @@ set hidden
 
 " Spell check when writing commit logs
 autocmd filetype *commit* setlocal spell
+
+" ============================================================================
+" Status line settings
+
+" Status line
+set statusline=                                           " Clear
+set statusline+=%7*\[%n]                                  " buffernr
+set statusline+=%1*\ %<%F\                                " File+path
+set statusline+=%2*\ %y\                                  " FileType
+set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      " Encoding
+set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            " Encoding2
+set statusline+=%4*\ %{&ff}\                              " FileFormat (dos/unix..)
+set statusline+=%5*\ %{&spelllang}\%{HighlightSearch()}\  " Spellanguage & Highlight on?
+set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             " Rownumber/total (%)
+set statusline+=%9*\ col:%03c\                            " Colnr
+set statusline+=%0*\ \ %m%r%w\ %P\ \                      " Modified? Readonly? Top/bot.
+set laststatus=2
+
+" Additional Colors
+" (must be after any colorscheme settings or these will be cleared)
+hi User1 ctermfg=224 ctermbg=88  guifg=#ffdad8 guibg=#880c0e
+hi User2 ctermfg=16  ctermbg=209 guifg=#000000 guibg=#F4905C
+hi User3 ctermfg=234 ctermbg=228 guifg=#292b00 guibg=#f4f597
+hi User4 ctermfg=233 ctermbg=156 guifg=#112605 guibg=#aefe7B
+hi User5 ctermfg=232 ctermbg=114 guifg=#051d00 guibg=#7dcc7d
+hi User7 ctermfg=231 ctermbg=88  guifg=#ffffff guibg=#880c0e gui=bold cterm=bold
+hi User8 ctermfg=231 ctermbg=67  guifg=#ffffff guibg=#5b7fbb
+hi User9 ctermfg=231 ctermbg=90  guifg=#ffffff guibg=#810085
+hi User0 ctermfg=231 ctermbg=27  guifg=#ffffff guibg=#094afe
+
+" Is highlight search enabled
+function! HighlightSearch()
+  if &hls
+    return '  H'
+  else
+    return ''
+  endif
+endfunction
+
+" Highlight search result toggle
+:noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " ============================================================================
 " Plugin Settings
