@@ -25,8 +25,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/NerdTree'
 " Neaten code
 Plugin 'godlygeek/tabular'
-" Makes python editing in vim nicer
-Plugin 'klen/python-mode'
 " Display number of search results
 Plugin 'IndexedSearch'
 " CodeCompletion (if not on windows)
@@ -202,3 +200,8 @@ let g:pymode_lint_signs=0
 let g:pymode_folding=0
 " Don't load rope by default.
 let g:pymode_rope=0
+
+" YouCompleteMe -----------------------
+
+" Auto close documentation window
+let g:ycm_autoclose_preview_window_after_completion=1
