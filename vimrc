@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set encoding=utf-8
 
 "set the runtime path to include Vundle and initialize
 if has("win32")
