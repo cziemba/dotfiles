@@ -96,7 +96,7 @@ set incsearch
 set hlsearch
 
 " Don't wrap lines by default / Enable smart wrapping
-set wrap
+set nowrap
 set linebreak
 
 " Default indent settings
