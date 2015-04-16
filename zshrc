@@ -16,6 +16,7 @@ plugins=(git zsh-syntax-highlighting virtualenv virtualenvwrapper)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH="$PATH:/opt/eb/linux/python2.7"
 export PATH="$PATH:/opt/android-studio/bin"
+export PATH="$PATH:$JAVA_HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
