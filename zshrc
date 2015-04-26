@@ -9,7 +9,7 @@ ENABLE_CORRECTION="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git zsh-syntax-highlighting virtualenv virtualenvwrapper)
+plugins=(git zsh-syntax-highlighting virtualenv virtualenvwrapper termsupport)
 
 # User configuration
 
@@ -36,3 +36,6 @@ fi
 if [[ -f "$HOME/.secrets" ]]; then
     source $HOME/.secrets
 fi
+
+# Aliases
+alias hg='history | grep'
