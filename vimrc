@@ -8,9 +8,8 @@ set encoding=utf-8
 
 " Platform specific paths
 if has("win32")
-    set rtp+=$USERPROFILE/dotfiles/vim/bundle/Vundle.vim
-    call vundle#begin("$USERPROFILE/dotfiles/vim/bundle/")
-    set viminfo+=n$USERPROFILE/dotfiles/vim/_viminfo
+    set rtp+=~/vimfiles/bundle/Vundle.vim
+    call vundle#begin("~/vimfiles/bundle/")
 else
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin("~/.vim/bundle/")
