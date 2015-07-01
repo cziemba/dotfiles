@@ -10,6 +10,7 @@ set encoding=utf-8
 if has("win32")
     set rtp+=~/vimfiles/bundle/Vundle.vim
     call vundle#begin("~/vimfiles/bundle/")
+    set viminfo+=n~/vimfiles/_viminfo
 else
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin("~/.vim/bundle/")
@@ -27,6 +28,10 @@ Plugin 'scrooloose/NerdTree'
 Plugin 'godlygeek/tabular'
 " Display number of search results
 Plugin 'IndexedSearch'
+" Color Schemes
+Plugin 'flazz/vim-colorschemes'
+" Better Markdown support
+Plugin 'plasticboy/vim-markdown'
 " CodeCompletion (if not on windows)
 if !has("win32")
     Plugin 'Valloric/YouCompleteMe'
