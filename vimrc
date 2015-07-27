@@ -100,6 +100,9 @@ set list
 set incsearch
 set hlsearch
 
+" Highlight current line
+set cursorline
+
 " Don't wrap lines by default / Enable smart wrapping
 set nowrap
 set linebreak
