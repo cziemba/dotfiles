@@ -1,7 +1,36 @@
+" ============================================================================
+" Important first commands
+
 " Vim > vi
 set nocompatible
 filetype off
 set encoding=utf-8
+
+" ============================================================================
+" GUI specific Vim settings
+
+if has("gui_running")
+    " Settings for various platforms
+    if has("gui_gtk2")
+        set guifont=Inconsolata\ 12
+    elseif has("gui_macvim")
+        set guifont=Menlo\ Regular:h14
+    elseif has("gui_win32")
+        set guifont=Consolas:h10:cANSI
+        " Disable syntastic check on windows (spawns a cmd)
+        let b:syntastic_mode="passive"
+    endif
+
+    " Initial size
+    set lines=40 columns=150
+
+    " Remove toolbars etc
+    :set guioptions+=M  "do not source menu.vim
+    :set guioptions-=m  "remove menu bar
+    :set guioptions-=T  "remove toolbar
+    :set guioptions-=r  "remove right-hand scroll bar
+    :set guioptions-=L  "remove left-hand scroll bar
+endif
 
 " ============================================================================
 " Vundle set up
@@ -38,31 +67,6 @@ if !has("win32")
 endif
 
 call vundle#end()
-
-" ============================================================================
-" GUI specific Vim settings
-
-if has("gui_running")
-    " Settings for various platforms
-    if has("gui_gtk2")
-        set guifont=Inconsolata\ 12
-    elseif has("gui_macvim")
-        set guifont=Menlo\ Regular:h14
-    elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
-        " Disable syntastic check on windows (spawns a cmd)
-        let b:syntastic_mode="passive"
-    endif
-
-    " Initial size
-    set lines=40 columns=150
-
-    " Remove toolbars etc
-    :set guioptions-=m  "remove menu bar
-    :set guioptions-=T  "remove toolbar
-    :set guioptions-=r  "remove right-hand scroll bar
-    :set guioptions-=L  "remove left-hand scroll bar
-endif
 
 " ============================================================================
 " Vim Settings
@@ -230,6 +234,10 @@ endfunction
 
 " Check on open
 let g:syntastic_check_on_open=1
+" Disable python syntax check in windows (too slow)
+if has("gui_win32")
+    let g:syntastic_ignore_files = ['\.py$']
+endif
 
 " NERDTree ----------------------------
 
