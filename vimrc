@@ -15,10 +15,6 @@ if has("gui_running")
         set guifont=Inconsolata\ 12
     elseif has("gui_macvim")
         set guifont=Menlo\ Regular:h14
-    elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
-        " Disable syntastic check on windows (spawns a cmd)
-        let b:syntastic_mode="passive"
     endif
 
     " Initial size
@@ -36,14 +32,8 @@ endif
 " Vundle set up
 
 " Platform specific paths
-if has("win32")
-    set rtp+=~/vimfiles/bundle/Vundle.vim
-    call vundle#begin("~/vimfiles/bundle/")
-    set viminfo+=n~/vimfiles/_viminfo
-else
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin("~/.vim/bundle/")
-endif
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin("~/.vim/bundle/")
 
 " Vundle (duh)
 Plugin 'gmarik/Vundle.vim'
@@ -61,10 +51,6 @@ Plugin 'IndexedSearch'
 Plugin 'flazz/vim-colorschemes'
 " Better Markdown support
 Plugin 'plasticboy/vim-markdown'
-" CodeCompletion (if not on windows)
-if !has("win32")
-    Plugin 'Valloric/YouCompleteMe'
-endif
 
 call vundle#end()
 
@@ -105,6 +91,7 @@ set incsearch
 set hlsearch
 
 " Highlight current line
+highlight CursorLine term=underline cterm=underline ctermbg=253
 set cursorline
 
 " Don't wrap lines by default / Enable smart wrapping
@@ -135,9 +122,6 @@ set sidescroll=1
 " Mouse settings for terminal
 set mouse=a
 set ttymouse=xterm2
-
-" Tell the term has 256 colors
-set t_Co=256
 
 " Hide buffers when not displayed
 set hidden
@@ -257,8 +241,3 @@ let g:pymode_lint_signs=0
 let g:pymode_folding=0
 " Don't load rope by default.
 let g:pymode_rope=0
-
-" YouCompleteMe -----------------------
-
-" Auto close documentation window
-let g:ycm_autoclose_preview_window_after_completion=1
