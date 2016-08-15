@@ -65,6 +65,8 @@ syntax enable
 
 " Dark Background, use solarized
 set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
 colorscheme solarized
 
 " Allow backspacing over everything in insert mode
@@ -91,7 +93,7 @@ set incsearch
 set hlsearch
 
 " Highlight current line
-highlight CursorLine term=underline cterm=underline ctermbg=253
+highlight CursorLine term=underline cterm=underline
 set cursorline
 
 " Don't wrap lines by default / Enable smart wrapping
