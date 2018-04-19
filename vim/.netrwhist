@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/czziemba/.zsh'
+let g:netrw_dirhist_2='/workspace/czziemba/AlexaServiceWS/build/AlexaHTTPService/AlexaHTTPService-1.0/RHEL5_64/DEV.STD.PTHREAD/build/private/var/output/logs'
+let g:netrw_dirhist_3='/workspace/czziemba/DeeAppShoRemoteWS/build/DeeAppShoppingRemoteSpeechletService/DeeAppShoppingRemoteSpeechletService-1.0/RHEL5_64/DEV.STD.PTHREAD/build/private/var/output/logs'
+let g:netrw_dirhist_4='/workspace/AsinDataServiceWS/src/DPXHorizonteApplication/build'
+let g:netrw_dirhist_5='/local/workspace/czziemba/DeeAppShoQA/src/AlexaShoppingVUIEndToEndTests/build'
+let g:netrw_dirhist_6='/local/workspace/czziemba/DeeAppShoQA/src/DeeAppQAFuncTestSho/brazil-config'
+let g:netrw_dirhist_7='/local/apollo/var/env/AlexaHeimdallService/output/logs'
+let g:netrw_dirhist_8='/local/workspace/czziemba/DeeAppShoQA/src/DeeAppQAFuncTestSho/build'

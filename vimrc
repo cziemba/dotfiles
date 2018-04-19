@@ -51,6 +51,9 @@ Plugin 'IndexedSearch'
 Plugin 'flazz/vim-colorschemes'
 " Better Markdown support
 Plugin 'plasticboy/vim-markdown'
+Plugin 'VisIncr'
+" Pbcopy Helper
+Plugin 'ahw/vim-pbcopy'
 
 call vundle#end()
 
@@ -243,3 +246,6 @@ let g:pymode_lint_signs=0
 let g:pymode_folding=0
 " Don't load rope by default.
 let g:pymode_rope=0
+
+" Pbcopy remotely
+let g:vim_pbcopy_remote_cmd = "ssh 147dda7333c9.ant.amazon.com pbcopy"
