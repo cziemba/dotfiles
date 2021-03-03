@@ -54,6 +54,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'VisIncr'
 " Pbcopy Helper
 Plugin 'ahw/vim-pbcopy'
+" CtrlP
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
@@ -104,8 +107,8 @@ set nowrap
 set linebreak
 
 " Default indent settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 
